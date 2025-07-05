@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F8FAFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Judul Aplikasi -->
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="DailyPlan+"
+        android:textSize="24sp"
+        android:textColor="#1A237E"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <!-- Subjudul -->
+    <TextView
+        android:id="@+id/subTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aplikasi manajemen aktivitas harian"
+        android:textSize="14sp"
+        android:textColor="#4A4A4A"
+        android:gravity="center"/>
+
+    <!-- Tab -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:tabIndicatorColor="@color/teal_700"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="@color/dark_gray" />
+
+    <!-- ViewPager -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

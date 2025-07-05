@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Notifikasi -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logoapk"
+        android:label="DailyPlan+"
+        android:roundIcon="@drawable/logoapk"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Dailyplanplus_uasml2_221351165"
+        tools:targetApi="31">
+
+        <!-- Receiver notifikasi -->
+        <receiver android:name=".notification.NotificationReceiver" />
+
+        <!-- SplashActivity sebagai layar pertama -->
+        <activity
+            android:name=".ui.view.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity -->
+        <activity
+            android:name=".ui.view.MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>
